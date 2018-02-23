@@ -17,6 +17,7 @@ class Welcome extends Component {
 
   constructor (props) {
     super(props)
+    console.log("props",props);
     this.connectUport = this.connectUport.bind(this)
   }
 
@@ -25,7 +26,7 @@ class Welcome extends Component {
       { requested: ['name', 'phone', 'country', 'avatar'],
         notifications: true }
     ).then((credentials) => {
-        console.log({credentials})
+        console.log("creds",{credentials})
         this.props.actions.connectUport(credentials)
     })
   }
@@ -33,8 +34,7 @@ class Welcome extends Component {
   render () {
     return (
       <WelcomeWrap>
-        <h4>Build a Better dApp</h4>
-        <SubText>Identity and transaction infrastructure for Ethereum</SubText>
+        <SubText>Identity on Ethereum</SubText>
         <ConnectUport
           onClick={this.connectUport}>
           Connect with uPort

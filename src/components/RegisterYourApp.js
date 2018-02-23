@@ -20,12 +20,8 @@ class RegisterYourApp extends Component {
       <RegisterYourAppWrap>
         <h4>Register your Application</h4>
         <br/>
-        <Link className='external' target='_blank' href='http://developer.uport.me'>
-          Go to the full Documentation Site.
-        </Link>
-        <br/>
         <Link className='external' target='_blank' href='http://developer.uport.me/myapps.html'>
-          Go directly to the App Manager in the Documentation Site
+          App Manager
         </Link>
         <br/>
         <Link className='external' target='_blank' href='https://goo.gl/6mq9NW'>
@@ -34,9 +30,10 @@ class RegisterYourApp extends Component {
         <br/>
         <NextButton
           onClick={this.props.actions.registerAppAreaComplete}>
-          Next
+          Logout
         </NextButton>
       </RegisterYourAppWrap>
+
     )
   }
 }

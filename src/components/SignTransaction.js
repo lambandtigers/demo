@@ -1,6 +1,7 @@
 // Frameworks
 import React, { Component } from 'react'
 
+
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as AppActions from '../actions/AppActions'
@@ -42,6 +43,8 @@ class SignTransaction extends Component {
     this.getCurrentShares = this.getCurrentShares.bind(this)
     this.buyShares = this.buyShares.bind(this)
     this.handleInputChange = this.handleInputChange.bind(this)
+    console.log("uport",this.props.uport);
+
   }
 
   getCurrentShares () {
@@ -73,6 +76,7 @@ class SignTransaction extends Component {
         },
         (total) => {
           console.log('waitForMined complete')
+          console.log("total",total);
           this.props.actions.buySharesSUCCESS(txHash, total)
         }
       )
@@ -91,6 +95,9 @@ class SignTransaction extends Component {
   render () {
     return (
       <SharesWrap>
+      <h3> <b>Name</b>: {this.props.uport.name} </h3>
+      <h3> <b>Type</b>: {this.props.uport["@type"]} </h3>
+      <h3> <b>Address</b>: {this.props.uport.address} </h3>
         <h4>Sign a transaction</h4>
         <SubText>Buy Shares</SubText>
 
@@ -146,7 +153,7 @@ class SignTransaction extends Component {
         </SharesArea>
         {
           this.props.confirmingInProgress
-            ? <div>Please confirm the transaction card on your phone</div>
+            ? <div>Please confirm the transaction on your phone</div>
             : null
         }
 

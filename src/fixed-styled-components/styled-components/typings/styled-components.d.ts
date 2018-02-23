@@ -162,7 +162,7 @@ export interface ThemedStyledInterface<T> extends ThemedBaseStyledInterface<T> {
   clipPath: ThemedSvgStyledFunction<SVGClipPathElement, T>;
   defs: ThemedSvgStyledFunction<SVGDefsElement, T>;
   ellipse: ThemedSvgStyledFunction<SVGEllipseElement, T>;
-  g: ThemedSvgStyledFunction<SVGGElement, T>;
+  //g: ThemedSvgStyledFunction<SVGGElement, T>;
   image: ThemedSvgStyledFunction<SVGImageElement, T>;
   line: ThemedSvgStyledFunction<SVGLineElement, T>;
   linearGradient: ThemedSvgStyledFunction<SVGLinearGradientElement, T>;

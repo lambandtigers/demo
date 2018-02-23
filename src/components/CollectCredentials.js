@@ -40,7 +40,7 @@ const SubText = styled.p`
 `
 
 const RELATIONSHIPCLAIM = 'User'
-const CERTIFICATECLAIM = 'uPort Demo'
+const CERTIFICATECLAIM = 'SSI Demo App'
 
 class CollectCredentials extends Component {
 
@@ -101,7 +101,7 @@ class CollectCredentials extends Component {
               </tr>
               <tr>
                 <td>
-                  <CredsLabel>Certificate: uPort Demo</CredsLabel>
+                  <CredsLabel>Certificate: SSI Demo App</CredsLabel>
                 </td>
                 <td>
                   <CredsButton onClick={this.credentialsbtnClickC}>Get</CredsButton>
